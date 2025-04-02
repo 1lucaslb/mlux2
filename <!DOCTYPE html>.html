@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLUX² - Agence de Marketing Digital Luxe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid lightgray;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            font-size: 36px; /* Augmenté pour rendre le nom plus grand */
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .logo-img {
+            height: 80px; /* Logo agrandi */
+        }
+        nav a {
+            color: black;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+        }
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .hero h1 {
+            font-size: 48px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            position: relative;
+            z-index: 1;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: black;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            position: relative;
+            z-index: 1;
+        }
+        .services, .satisfied-clients, .contact {
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+        }
+        /* Services alignés horizontalement */
+        .services p {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-around; /* Espacement uniforme */
+            align-items: center;
+        }
+        .services p span {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .satisfied-clients img {
+            width: 150px;
+            margin: 10px;
+        }
+        /* Footer logo rétabli */
+        .footer-logo-container {
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .footer-logo-img {
+            width: 200px; /* Logo ajusté à une taille plus petite */
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="MLUX² Logo" class="logo-img">
+            <div class="logo">MLUX²</div>
+        </div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#satisfied-clients">Clients Satisfaits</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <video autoplay muted loop>
+            <source src="video.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+        <h1>L’Excellence Digitale, Amplifiée.</h1>
+        <p>Nous propulsons les marques de luxe à l’ère du digital grâce à des stratégies sur-mesure et innovantes.</p>
+        <a href="#contact" class="cta-button">Travaillons ensemble</a>
+    </section>
+    <section id="services" class="services">
+        <h2>Nos Services</h2>
+        <p>
+            <span>&#128187; Social Media</span>
+            <span>&#128221; Branding</span>
+            <span>&#127775; Influence</span>
+            <span>&#128640; Publicité Digitale</span>
+            <span>&#128269; SEO</span>
+        </p>
+    </section>
+    <section id="satisfied-clients" class="satisfied-clients">
+        <h2>Clients Satisfaits</h2>
+        <div>
+            <img src="https://companieslogo.com/img/orig/CDI.PA_BIG-0bd74bba.png?t=1720244491" alt="Dior">
+            <img src="https://brandslogos.com/wp-content/uploads/images/large/boucheron-logo.png" alt="Boucheron">
+            <img src="https://logo-marque.com/wp-content/uploads/2022/03/Dom-Perignon-Logo.png" alt="Dom Pérignon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Audemars_Piguet_logo.png" alt="Audemars Piguet">
+        </div>
+        <p>et plein d'autres...</p>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contactez-nous</h2>
+        <p>Email : contact@mlux2.com | Téléphone : +33 6 92 87 45 21</p>
+        <div class="footer-logo-container">
+            <img src="logo.png" alt="MLUX² Logo" class="footer-logo-img">
+        </div>
+    </section>
+</body>
+</html>
