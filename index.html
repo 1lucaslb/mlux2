@@ -1,254 +1,319 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MLUX² - Agence de Marketing Digital Luxe</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: white;
-            color: black;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            border-bottom: 1px solid lightgray;
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-        .logo {
-            font-size: 36px;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-        .logo-img {
-            height: 80px;
-        }
-        nav a {
-            color: black;
-            margin: 0 15px;
-            text-decoration: underline;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #888;
-        }
-        .hero {
-            position: relative;
-            text-align: center;
-            padding: 100px 20px;
-            color: white;
-        }
-        .hero video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-        .hero h1 {
-            font-size: 48px;
-            position: relative;
-            z-index: 1;
-        }
-        .hero p {
-            font-size: 20px;
-            max-width: 600px;
-            margin: 20px auto;
-            position: relative;
-            z-index: 1;
-        }
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: black;
-            color: white;
-            font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            position: relative;
-            z-index: 1;
-        }
-        .services {
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .services h2 {
-            margin-bottom: 40px;
-            font-size: 32px;
-        }
-        .services-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .service-item {
-            width: 250px;
-            text-align: center;
-        }
-        .service-item .icon {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-        .service-item h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        .service-item p {
-            font-size: 16px;
-            color: #444;
-            line-height: 1.5;
-        }
-        @media (max-width: 768px) {
-            .services-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-            .service-item {
-                width: 90%;
-                max-width: 300px;
-            }
-            .hero h1 {
-                font-size: 32px;
-            }
-            .hero p {
-                font-size: 16px;
-            }
-        }
-        .satisfied-clients {
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .satisfied-clients h2 {
-            font-size: 32px;
-            margin-bottom: 30px;
-        }
-        .logo-cloud {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .logo-row {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
-        .satisfied-clients img {
-            width: 150px;
-            max-width: 100%;
-            height: auto;
-            transition: transform 0.6s ease;
-        }
-        .satisfied-clients img:hover {
-            transform: scale(1.1) rotateY(180deg);
-        }
-        .contact {
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .footer-logo-container {
-            width: 100%;
-            text-align: center;
-            margin-top: 50px;
-        }
-        .footer-logo-img {
-            width: 200px;
-            max-width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MLUX² - Agence de Marketing Digital Luxe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: black;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid lightgray;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 36px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .logo-img,
+    .footer-logo-img {
+      height: 80px;
+      transition: transform 0.4s ease;
+    }
+
+    .logo-img:hover,
+    .footer-logo-img:hover {
+      transform: rotate(-3deg);
+    }
+
+    nav a {
+      color: black;
+      margin: 0 15px;
+      text-decoration: underline;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #888;
+    }
+
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 100px 20px;
+      color: white;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      margin: 20px auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: black;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .services {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .services h2 {
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .service-item {
+      width: 250px;
+      text-align: center;
+    }
+
+    .service-item .icon {
+      font-size: 36px;
+      margin-bottom: 10px;
+      transition: transform 0.4s ease;
+      display: inline-block;
+    }
+
+    .service-item:hover .icon {
+      transform: scale(1.2) rotate(10deg);
+    }
+
+    .service-item h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .service-item p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .services-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .service-item {
+        width: 90%;
+        max-width: 300px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+
+    .satisfied-clients {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .satisfied-clients h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .logo-cloud {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .satisfied-clients img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .satisfied-clients img[alt="Dior"] {
+      width: 120px;
+    }
+
+    .satisfied-clients img:not([alt="Dior"]) {
+      width: 150px;
+    }
+
+    .contact {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .footer-logo-container {
+      width: 100%;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .footer-logo-img {
+      width: 200px;
+      max-width: 100%;
+      transition: transform 0.4s ease;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="MLUX² Logo" class="logo-img">
-            <div class="logo">MLUX²</div>
-        </div>
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#satisfied-clients">Clients Satisfaits</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="MLUX² Logo" class="logo-img" />
+      <div class="logo">MLUX²</div>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#satisfied-clients">Clients Satisfaits</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <section class="hero">
-        <video autoplay muted loop>
-            <source src="video.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-        </video>
-        <h1>L’Excellence Digitale, Amplifiée.</h1>
-        <p>Nous propulsons les marques de luxe à l’ère du digital grâce à des stratégies sur-mesure et innovantes.</p>
-        <a href="#contact" class="cta-button">Travaillons ensemble</a>
-    </section>
+  <section class="hero">
+    <video autoplay muted loop>
+      <source src="video.mp4" type="video/mp4" />
+      Votre navigateur ne supporte pas la lecture de vidéos.
+    </video>
+    <h1>L’Excellence Digitale, Amplifiée.</h1>
+    <p>
+      Nous propulsons les marques de luxe à l’ère du digital grâce à des
+      stratégies sur-mesure et innovantes.
+    </p>
+    <a href="#contact" class="cta-button">Travaillons ensemble</a>
+  </section>
 
-    <section id="services" class="services">
-        <h2>Nos Services</h2>
-        <div class="services-grid">
-            <div class="service-item">
-                <div class="icon">&#128187;</div>
-                <h3>Social Media</h3>
-                <p>Gestion stratégique de vos réseaux sociaux pour renforcer votre image de marque et l'engagement communautaire.</p>
-            </div>
-            <div class="service-item">
-                <div class="icon">&#128221;</div>
-                <h3>Branding</h3>
-                <p>Création d’identités visuelles fortes et cohérentes, de votre logo à votre ton de voix.</p>
-            </div>
-            <div class="service-item">
-                <div class="icon">&#127775;</div>
-                <h3>Influence</h3>
-                <p>Collaboration avec des talents et créateurs soigneusement sélectionnés pour valoriser votre univers.</p>
-            </div>
-            <div class="service-item">
-                <div class="icon">&#128640;</div>
-                <h3>Publicité Digitale</h3>
-                <p>Campagnes publicitaires ciblées et performantes sur les plateformes clés : Meta, Google, TikTok, etc.</p>
-            </div>
-            <div class="service-item">
-                <div class="icon">&#128269;</div>
-                <h3>SEO</h3>
-                <p>Optimisation de votre visibilité sur Google pour attirer un trafic qualifié et durable.</p>
-            </div>
-        </div>
-    </section>
+  <section id="services" class="services">
+    <h2>Nos Services</h2>
+    <div class="services-grid">
+      <div class="service-item">
+        <div class="icon">&#128187;</div>
+        <h3>Social Media</h3>
+        <p>
+          Gestion stratégique de vos réseaux sociaux pour renforcer votre image
+          de marque et l'engagement communautaire.
+        </p>
+      </div>
+      <div class="service-item">
+        <div class="icon">&#128221;</div>
+        <h3>Branding</h3>
+        <p>
+          Création d’identités visuelles fortes et cohérentes, de votre logo à
+          votre ton de voix.
+        </p>
+      </div>
+      <div class="service-item">
+        <div class="icon">&#127775;</div>
+        <h3>Influence</h3>
+        <p>
+          Collaboration avec des talents et créateurs soigneusement sélectionnés
+          pour valoriser votre univers.
+        </p>
+      </div>
+      <div class="service-item">
+        <div class="icon">&#128640;</div>
+        <h3>Publicité Digitale</h3>
+        <p>
+          Campagnes publicitaires ciblées et performantes sur les plateformes
+          clés : Meta, Google, TikTok, etc.
+        </p>
+      </div>
+      <div class="service-item">
+        <div class="icon">&#128269;</div>
+        <h3>SEO</h3>
+        <p>
+          Optimisation de votre visibilité sur Google pour attirer un trafic
+          qualifié et durable.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <section id="satisfied-clients" class="satisfied-clients">
-        <h2>Clients Satisfaits</h2>
-        <div class="logo-cloud">
-            <div class="logo-row">
-                <img src="https://companieslogo.com/img/orig/CDI.PA_BIG-0bd74bba.png?t=1720244491" alt="Dior">
-                <img src="https://cdn.freebiesupply.com/logos/large/2x/boucheron-logo-png-transparent.png" alt="Boucheron">
-                <img src="https://logo-marque.com/wp-content/uploads/2022/03/Dom-Perignon-Logo.png" alt="Dom Pérignon">
-            </div>
-            <p>et plein d'autres...</p>
-            <div class="logo-row">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Audemars_Piguet_logo.png" alt="Audemars Piguet">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Logo-Jacquemus.svg/2560px-Logo-Jacquemus.svg.png" alt="Jacquemus">
-            </div>
-        </div>
-    </section>
+  <section id="satisfied-clients" class="satisfied-clients">
+    <h2>Clients Satisfaits</h2>
+    <div class="logo-cloud">
+      <div class="logo-row">
+        <img src="https://companieslogo.com/img/orig/CDI.PA_BIG-0bd74bba.png?t=1720244491" alt="Dior" />
+        <img src="https://cdn.freebiesupply.com/logos/large/2x/boucheron-logo-png-transparent.png" alt="Boucheron" />
+        <img src="https://logo-marque.com/wp-content/uploads/2022/03/Dom-Perignon-Logo.png" alt="Dom Pérignon" />
+      </div>
+      <p>et plein d'autres...</p>
+      <div class="logo-row">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Audemars_Piguet_logo.png" alt="Audemars Piguet" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Logo-Jacquemus.svg/2560px-Logo-Jacquemus.svg.png" alt="Jacquemus" />
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="contact">
-        <h2>Contactez-nous</h2>
-        <p>Email : contact@mlux2.com | Téléphone : +33 6 92 87 45 21</p>
-        <div class="footer-logo-container">
-            <img src="logo.png" alt="MLUX² Logo" class="footer-logo-img">
-        </div>
-    </section>
+  <section id="contact" class="contact">
+    <h2>Contactez-nous</h2>
+    <p>Email : contact@mlux2.com | Téléphone : +33 6 92 87 45 21</p>
+    <div class="footer-logo-container">
+      <img src="logo.png" alt="MLUX² Logo" class="footer-logo-img" />
+    </div>
+  </section>
 </body>
 </html>
