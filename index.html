@@ -190,16 +190,13 @@
       margin-bottom: 20px;
     }
 
+    .logo-row:last-of-type {
+      margin-top: 30px; /* espace entre "et plein d'autres..." et logos du bas */
+    }
+
     .satisfied-clients img {
       max-width: 100%;
       height: auto;
-    }
-
-    .satisfied-clients img[alt="Dior"] {
-      width: 100px;
-    }
-
-    .satisfied-clients img:not([alt="Dior"]) {
       width: 150px;
     }
 
@@ -217,6 +214,8 @@
     .footer-logo-img {
       height: 80px;
       max-width: 100%;
+      transition: transform 1s ease;
+      transform-style: preserve-3d;
     }
   </style>
 </head>
@@ -317,3 +316,4 @@
   </section>
 </body>
 </html>
+
