@@ -24,12 +24,12 @@
             align-items: center;
         }
         .logo {
-            font-size: 36px; /* Augmenté pour rendre le nom plus grand */
+            font-size: 36px;
             font-weight: bold;
             margin-left: 10px;
         }
         .logo-img {
-            height: 80px; /* Logo agrandi */
+            height: 80px;
         }
         nav a {
             color: black;
@@ -75,36 +75,68 @@
             position: relative;
             z-index: 1;
         }
-        .services, .satisfied-clients, .contact {
+        .services {
             padding: 50px 20px;
             text-align: center;
-            position: relative;
         }
-        /* Services alignés horizontalement */
-        .services p {
-            font-size: 24px;
-            font-weight: bold;
+        .services h2 {
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+        .services-grid {
             display: flex;
-            justify-content: space-around; /* Espacement uniforme */
-            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
         }
-        .services p span {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+        .service-item {
+            width: 250px;
+            text-align: center;
+        }
+        .service-item .icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .service-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .service-item p {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .services-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .service-item {
+                width: 90%;
+                max-width: 300px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+        }
+        .satisfied-clients, .contact {
+            padding: 50px 20px;
+            text-align: center;
         }
         .satisfied-clients img {
             width: 150px;
             margin: 10px;
         }
-        /* Footer logo rétabli */
         .footer-logo-container {
             width: 100%;
             text-align: center;
             margin-top: 50px;
         }
         .footer-logo-img {
-            width: 200px; /* Logo ajusté à une taille plus petite */
+            width: 200px;
             max-width: 100%;
         }
     </style>
@@ -121,6 +153,7 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
+
     <section class="hero">
         <video autoplay muted loop>
             <source src="video.mp4" type="video/mp4">
@@ -130,26 +163,50 @@
         <p>Nous propulsons les marques de luxe à l’ère du digital grâce à des stratégies sur-mesure et innovantes.</p>
         <a href="#contact" class="cta-button">Travaillons ensemble</a>
     </section>
+
     <section id="services" class="services">
         <h2>Nos Services</h2>
-        <p>
-            <span>&#128187; Social Media</span>
-            <span>&#128221; Branding</span>
-            <span>&#127775; Influence</span>
-            <span>&#128640; Publicité Digitale</span>
-            <span>&#128269; SEO</span>
-        </p>
+        <div class="services-grid">
+            <div class="service-item">
+                <div class="icon">&#128187;</div>
+                <h3>Social Media</h3>
+                <p>Gestion stratégique de vos réseaux sociaux pour renforcer votre image de marque et l'engagement communautaire.</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">&#128221;</div>
+                <h3>Branding</h3>
+                <p>Création d’identités visuelles fortes et cohérentes, de votre logo à votre ton de voix.</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">&#127775;</div>
+                <h3>Influence</h3>
+                <p>Collaboration avec des talents et créateurs soigneusement sélectionnés pour valoriser votre univers.</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">&#128640;</div>
+                <h3>Publicité Digitale</h3>
+                <p>Campagnes publicitaires ciblées et performantes sur les plateformes clés : Meta, Google, TikTok, etc.</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">&#128269;</div>
+                <h3>SEO</h3>
+                <p>Optimisation de votre visibilité sur Google pour attirer un trafic qualifié et durable.</p>
+            </div>
+        </div>
     </section>
+
     <section id="satisfied-clients" class="satisfied-clients">
         <h2>Clients Satisfaits</h2>
         <div>
             <img src="https://companieslogo.com/img/orig/CDI.PA_BIG-0bd74bba.png?t=1720244491" alt="Dior">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/boucheron-logo-png-transparent.png">
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/boucheron-logo-png-transparent.png" alt="Boucheron">
             <img src="https://logo-marque.com/wp-content/uploads/2022/03/Dom-Perignon-Logo.png" alt="Dom Pérignon">
             <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Audemars_Piguet_logo.png" alt="Audemars Piguet">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Logo-Jacquemus.svg/2560px-Logo-Jacquemus.svg.png" alt="Jacquemus">
         </div>
         <p>et plein d'autres...</p>
     </section>
+
     <section id="contact" class="contact">
         <h2>Contactez-nous</h2>
         <p>Email : contact@mlux2.com | Téléphone : +33 6 92 87 45 21</p>
