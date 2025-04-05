@@ -32,8 +32,16 @@
       margin-left: 10px;
     }
 
-    .logo-img {
+    .logo-img,
+    .footer-logo-img {
       height: 80px;
+      transition: transform 1s ease;
+      transform-style: preserve-3d;
+    }
+
+    .logo-img:hover,
+    .footer-logo-img:hover {
+      transform: rotateY(360deg);
     }
 
     nav a {
@@ -189,6 +197,7 @@
     .satisfied-clients img {
       max-width: 100%;
       height: auto;
+      width: 150px;
     }
 
     /* Réduction spécifique du logo Dior */
@@ -210,6 +219,8 @@
     .footer-logo-img {
       height: 80px;
       max-width: 100%;
+      transition: transform 1s ease;
+      transform-style: preserve-3d;
     }
   </style>
 </head>
@@ -310,4 +321,3 @@
   </section>
 </body>
 </html>
-
