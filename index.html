@@ -32,16 +32,8 @@
       margin-left: 10px;
     }
 
-    .logo-img,
-    .footer-logo-img {
+    .logo-img {
       height: 80px;
-      transition: transform 1s ease;
-      transform-style: preserve-3d;
-    }
-
-    .logo-img:hover,
-    .footer-logo-img:hover {
-      transform: rotateY(360deg);
     }
 
     nav a {
@@ -132,7 +124,7 @@
     }
 
     .service-item:hover .icon {
-      transform: scale(1.2) rotate(10deg);
+      transform: scale(2);
     }
 
     .service-item h3 {
@@ -200,6 +192,11 @@
       width: 150px;
     }
 
+    /* Ajustement spécifique du logo Dior */
+    .logo-cloud img[src*="CDI.PA_BIG"] {
+      width: 100px !important;
+    }
+
     .contact {
       padding: 50px 20px;
       text-align: center;
@@ -214,8 +211,6 @@
     .footer-logo-img {
       height: 80px;
       max-width: 100%;
-      transition: transform 1s ease;
-      transform-style: preserve-3d;
     }
   </style>
 </head>
@@ -316,4 +311,3 @@
   </section>
 </body>
 </html>
-
